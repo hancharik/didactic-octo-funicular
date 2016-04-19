@@ -16,8 +16,10 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class StarFrame  extends JFrame {
 
     
+    //MainPanel2 main = new MainPanel2();
     MainPanel2 main = new MainPanel2();
-
+    
+    
     public StarFrame() {
         super("<<<<<<   Star Map Array Test   >>>>>>");
 
@@ -27,8 +29,8 @@ public class StarFrame  extends JFrame {
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        setSize(1600, 820);
-        this.setLocation(100, 100);
+        setSize(1920,1080);
+        //this.setLocation(100, 100);
         setVisible(true);
     } // end constructor
 

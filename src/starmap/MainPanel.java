@@ -6,6 +6,9 @@
 package starmap;
 
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JPanel;
 
 /**
@@ -17,7 +20,11 @@ public class MainPanel extends JPanel{
     
   //  StarPanel stars;
     TwentyOneGrid twentyOne;
-     
+     // http://stackoverflow.com/questions/19125707/simplest-way-to-set-image-as-jpanel-background
+    Image background = Toolkit.getDefaultToolkit().createImage("background.jpg");
+    
+    
+    
     public  MainPanel(){
     
         super();
@@ -45,7 +52,12 @@ public class MainPanel extends JPanel{
        
    } 
     
-    
+    @Override
+  protected void paintComponent(Graphics g) {
+
+    super.paintComponent(g);
+        g.drawImage(background, 0, 0, null);
+    }
     
     
 }  // end class

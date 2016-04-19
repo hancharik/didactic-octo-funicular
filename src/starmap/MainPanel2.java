@@ -6,6 +6,9 @@
 package starmap;
 
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
@@ -30,6 +33,16 @@ public class MainPanel2 extends JPanel{
     
     JLabel label1;
     JLabel label2;
+    
+    
+         // http://stackoverflow.com/questions/19125707/simplest-way-to-set-image-as-jpanel-background
+   // Image background = Toolkit.getDefaultToolkit().createImage("background.jpg");
+    
+    
+    
+    
+    
+    
     
     
     public  MainPanel2(){
@@ -70,12 +83,12 @@ public class MainPanel2 extends JPanel{
        drawLocalStars(stars3, true, midPoint,midPoint);
       
        
-       label1 = new JLabel("<html><h1><font color='white' >" +  "(34,17)"  + "</font></h1></html>");
-       label1.setBounds(732, 320, 400, 400);
+       label1 = new JLabel("<html><h1><font color='white' >" +  "(50,50)"  + "</font></h1></html>");
+       label1.setBounds(232, 320, 400, 400);
        //label1.setForeground(Color.white);
      add(label1);
        
-      label2 = new JLabel("<html><h1><font color='white' >" +  "(34,17)"  + "</font></h1></html>");
+      label2 = new JLabel("<html><h1><font color='white' >" +  "(50,50)"  + "</font></h1></html>");
        label2.setBounds(1212, 320, 400, 400);
        //label1.setForeground(Color.white);
      add(label2);
@@ -139,6 +152,9 @@ public class MainPanel2 extends JPanel{
             }
         }
 
+        g21.buttonArray[g21.size/2-1][g21.size/2-1].setBackground(Color.green);
+        
+        
     }  // end draw stars
 
 
@@ -184,5 +200,17 @@ private boolean checkInRangeY(int num){
     
     return temp;
 }
-    
+   
+/*
+    @Override
+  protected void paintComponent(Graphics g) {
+
+    super.paintComponent(g);
+        g.drawImage(background, 0, 0, null);
+    }
+    */
+
+
+
+
 }  // end class

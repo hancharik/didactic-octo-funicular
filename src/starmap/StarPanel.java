@@ -31,7 +31,7 @@ public class StarPanel extends JPanel implements ActionListener {
         main = m;
         size = main.disHereSize;
         buildGrid();
-        
+       
     }  // end constructor
     
   
@@ -81,7 +81,8 @@ public class StarPanel extends JPanel implements ActionListener {
     
    private void doSomethingToButton(int x, int y){
        
-      
+       x = x + 1;
+       y = y + 1;
        
        
        if(x > size - 10){
@@ -91,7 +92,7 @@ public class StarPanel extends JPanel implements ActionListener {
            y = size - 10;
        }
         
-           int correctedX = x - 11;
+       int correctedX = x - 11;
        int correctedY = y - 11;
        
        main.midPoint2x = x-11;
@@ -121,7 +122,11 @@ public class StarPanel extends JPanel implements ActionListener {
         main.drawLargeStarMap( main.stars2, false);
    }    
     
-    
+   
+      private void colorCenter(){
+       
+         buttonArray[11][11].setBackground(Color.green);
+   }  
     
     
 }  // end class
